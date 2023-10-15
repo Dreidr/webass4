@@ -1,0 +1,231 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="color-scheme" content="light dark">
+
+        <!-- Link to jQuery Mobile CSS -->
+        <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="jquery.mobile-1.4.5/jquery-1.7.1.js"></script>
+        <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="jquery.mobile-1.4.5/jquery.validate.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJy_AGYB-28QgqxYPdssBLMTglPOrSXTM"></script>
+
+    </head>
+
+    <body>
+        <div data-role="page" id="home">
+          <div data-role="header" data-position="fixed" data-theme="b">
+              <a href="#myPanel" data-icon="bars" class="ui-btn-left">Menu</a>
+              <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right">
+                        <a href="#profilePage" class="ui-btn ui-corner-all">Log in</a>
+                        <a href="#signUpPage" class="ui-btn ui-corner-all">Sign Up</a>
+                    </div>
+              <h1>Eco-Treasure Hunts</h1>
+          </div>
+            
+            <div data-role="content" id="homeSection">
+              <img src="img/treasure.jpeg" alt="treasureLogo" class="logo">
+              <a href="#tasksPage" data-role="button">Tasks</a>
+              <a href="#mapPage" data-role="button">View Map</a>
+              <button onclick="scanQR()">Scan QR Code</button>
+
+          </div>
+          
+            <div data-role="panel" id="myPanel" data-display="push" data-position="left">
+              <!-- Content of the swipe menu -->
+                 
+                  <ul data-role="listview" class="nav-list">
+                  <li><a href="#profilePage">My Profile</a></li>
+                  <li><a href="#historyPage">History</a></li>
+                  <li><a href="#ecoFactsPage">Eco Facts</a></li>
+                  <li><a href="#pointsSection">Rewards</a></li>
+                </ul>
+            </div>
+        
+            <div  data-role="footer" class="ui-bar"  data-position="fixed"   data-theme="b"  >
+              <h1>&copy; 2023 Eco-Treasure Hunts</h1>
+            </div>
+        </div>
+        
+
+        <div data-role="page" id="profilePage">
+          <div data-role="header" data-position="fixed" data-theme="b" data-add-back-btn="true">
+              <h1>Log In</h1>
+          </div>
+
+        <div data-role="content">
+          <form id="loginForm">
+            <label for="email" class="ui-hidden-accessible">Email:</label>
+            <input type="email" id="email" name="email" placeholder="* Enter your e-mail address"/>
+            <label for="password" class="ui-hidden-accessible">Password:</label>
+            <input type="password" id="password" name="password" placeholder="* Enter your password"/>
+            <button type="submit" class="ui-btn ui-corner-all ui-btn-b" id="Subnmit">Log In</button>
+        </form>
+        <a href="#signUpPage" class="ui-btn ui-corner-all">Sign Up</a>
+        </div>
+
+        <div  data-role="footer" class="ui-bar"  data-position="fixed"   data-theme="b">
+          <h1>&copy; 2023 Eco-Treasure Hunts</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="signUpPage">
+      <div data-role="header" data-position="fixed" data-theme="b" data-add-back-btn="true">
+          <h1>Register</h1>
+      </div>
+
+            <div data-role="content">	
+                <h2>Please fill out the form</h2>
+                <form action="javascript:processValidForm(this)" name="inputForm" id="inputForm">
+                    <label for="name" class="ui-hidden-accessible">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="* Full Name" />
+                    <label for="email" class="ui-hidden-accessible">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="* Enter your e-mail address"/>
+                    <label for="password" class="ui-hidden-accessible">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="* Enter your password"/>
+                    <button type="submit" class="ui-btn ui-corner-all ui-btn-b" id="Subnmit">Submit</button>
+                </form>
+            </div>
+            <div  data-role="footer" class="ui-bar"  data-position="fixed"   data-theme="b"  >
+              <h1>&copy; 2023 Eco-Treasure Hunts</h1>
+            </div>
+        </div>
+
+        
+        <div data-role="page" id="tasksPage">
+          <div data-role="header" data-position="fixed" data-theme="b">
+              <a href="#home" class="ui-btn-left" data-icon="arrow-l">Back</a>
+              <h1>Tasks</h1>
+          </div>
+          <div data-role="content" class="centered-content">
+            
+            <div class="task-image">
+              <img src="https://img.freepik.com/premium-vector/people-are-cleaning-up-trash-park-world-environment-day-illustration_138260-1173.jpg" alt="Task Image" class="task-image">
+          </div>
+          <div class="task-info">
+              <h2>Clean up the environment</h2>
+              <p>
+                Clear workspace, discard waste, and reset tools to their original positions.
+              </p>
+              <p><strong>Estimated Time to Complete:</strong> 2 hours</p>
+              <p><strong>Points Value:</strong> 50</p>
+          
+              <!-- "Learn More" Button -->
+              <a href="#mapPage" class="ui-btn ui-corner-all ui-btn-b">Learn More</a>
+          </div>
+          </div>
+          <div data-role="footer" data-position="fixed" data-theme="b">
+              <h1>&copy; 2023 Eco-Treasure Hunts</h1>
+          </div>
+          </div>
+
+          <div data-role="page" id="mapPage">
+            <div data-role="header" data-position="fixed" data-theme="b">
+                <a href="#home" class="ui-btn-left" data-icon="arrow-l">Back</a>
+                <h1>Map</h1>
+            </div>
+            <div data-role="content">
+              <div id="mapContainer" style="height: 400px;"></div>
+              <div class="task-info">
+                <h2>Clean up the environment</h2>
+                <p>
+                  Clear workspace, discard waste, and reset tools to their original positions.
+                </p>
+                <p><strong>Estimated Time to Complete:</strong> 2 hours</p>
+                <p><strong>Points Value:</strong> 50</p>
+            
+                <!-- "Learn More" Button -->
+                <a href="#mapPage" class="ui-btn ui-corner-all ui-btn-b">Mark as Completed  </a>
+            </div>
+            </div>
+            <div data-role="footer" data-position="fixed" data-theme="b">
+                <h1>&copy; 2023 Eco-Treasure Hunts</h1>
+            </div>
+        </div>
+
+        <div data-role="page" id="pointsSection">
+          <div data-role="header" data-position="fixed" data-theme="b">
+            <a href="#home" class="ui-btn-left" data-icon="arrow-l">Back</a>
+            <h1>Rewards Data</h1>
+        </div>
+        <div data-role="content" class="centered-content">
+        <div class="image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgRGi47pmQMDcqRAfcrs8cUs8gv079ZvxkAQ&usqp=CAU" alt="Task Image" class="image">
+      </div>
+        <div class="points"> 
+          <p>User Points: <span id="userPoints" style="font-weight: bold;">Loading...</span></p>
+          <p>Tasks Completed: <span id="tasksCompleted" style="font-weight: bold;">Loading...</span></p>
+          <p>Completed Date: <span id="completedDate" style="font-weight: bold;">Loading...</span></p>
+          <p>Rewards: <span id="rewards" style="font-weight: bold;">Loading...</span></p>
+        </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+          <h1>&copy; 2023 Eco-Treasure Hunts</h1>
+      </div>
+      </div>
+     
+      <div data-role="page" id="ecoFactsPage">
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <a href="#home" class="ui-btn-left" data-icon="arrow-l">Back</a>
+            <h1>Eco Facts</h1>
+        </div>
+        <div data-role="content" class="centered-content">
+            <div id="image-container">
+                <img id="random-image" src="" alt="Random Image">
+            </div>
+            <div class="task-info">
+              <h2>Eco-Facts</h2>
+              <p>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+              </p>  
+          </div>
+            <button id="load-image-button" onclick="loadRandomImage()">Next</button>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h1>&copy; 2023 Eco-Treasure Hunts</h1>
+        </div>
+    </div>
+      
+    <div data-role="page" id="historyPage">
+      <div data-role="header" data-position="fixed" data-theme="b">
+          <a href="#home" class="ui-btn-left" data-icon="arrow-l">Back</a>
+          <h1>History</h1>
+      </div>
+
+      <div data-role="content" class="centered-content">
+          <ul data-role="listview" id="historyList">
+            <div data-role="content" class="centered-content">
+            
+                
+            <div class="task-info">
+                <h2>Social work</h2>
+                <p>
+                  Engaging in social work is a powerful way to make a positive impact on communities and individuals, fostering social change and improving the well-being of society as a whole.
+                </p>
+                <p><strong>Completed in:</strong> 2 hours</p>
+                <p><strong>Points Value:</strong> 10</p>
+                <a href="#pointsSection" class="ui-btn ui-corner-all ui-btn-b">View Rewards</a>
+            </div>
+            </div>
+          </ul>
+      </div>
+
+      <div data-role="footer" data-position="fixed" data-theme="b">
+          <h1>&copy; 2023 Eco-Treasure Hunts</h1>
+      </div>
+  </div>
+    
+    
+        
+      </div>
+        
+      
+
+        
+      
+    </body>
+    </html>

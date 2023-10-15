@@ -1,0 +1,133 @@
+.logo {
+    display: block;
+    max-width: 200px; /* Or the width you prefer */
+    margin: 0 auto 20px; /* Centers the logo and adds a bottom margin */
+  }
+  
+  .nav-image {
+    text-align: center;
+  }
+    
+  .nav-image img {
+    width: 200px; /* Adjusts the width as needed */
+    height: auto; /* Maintains aspect ratio */
+    border: solid;
+    margin:0 auto 40px;
+  }
+  
+  /* Style the panel/sidebar */
+  #myPanel {
+    width: 250px;
+  }
+  
+  /* Style the listview inside the panel */
+  #myPanel ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Remove bullet points */
+  }
+  
+  /* Style the list items */
+  #myPanel li {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Style links inside list items */
+  #myPanel li a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #333;
+  }
+  
+  /* Add hover effect to links */
+  #myPanel li a:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style for both Login and Register buttons */
+  .login-button, .register-button {
+    background-color: #007BFF ; /* Blue background color */
+    color: #fff ; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold; /* Add font weight for bold text */
+    text-transform: uppercase; /* Convert text to uppercase */
+  }
+  
+  
+  .custom {
+      color: #333333 ; 
+      text-shadow: none !important;
+      text-decoration: none !important;
+  }
+  
+  
+/* CSS Styles for Centering Image */
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* This sets the content to the full height of the viewport */
+}
+
+.task-image {
+    max-width: auto;
+    height: 100%;
+    margin: 10px 0;
+    margin-bottom: 20px;
+}
+
+  .task-info {
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+  }
+  
+  .task-info h2 {
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .task-info p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the "Learn More" button */
+  .task-info .ui-btn {
+    display: block;
+    width: 50%;
+    max-width: 200px;
+    margin: 0 auto; 
+    color: #fff;
+    text-align: center;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+  }
+  
+  /* Footer styles */
+  [data-role="footer"] {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+  
+  
+  /* Back button styles */
+  .ui-btn-left {
+    color: #fff !important;
+  }
+  
+
