@@ -6,7 +6,7 @@
   "main": "server/server.js",
  "scripts": {
    "start": "cd Client/www && node server/server.js"
-},,
+},
   "keywords": [
     "ecosystem:cordova"
   ],
