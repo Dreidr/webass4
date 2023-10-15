@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "This example is so cool.",
   "main": "server.js",
-  "scripts": {
-    "test": "mocha test"
-  },
+ "scripts": {
+  "start": "node server.js"
+},
   "author": "s-azad",
   "license": "MIT",
   "dependencies": {
