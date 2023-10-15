@@ -5,7 +5,7 @@
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "server/server.js",
  "scripts": {
-   "start": "cd client/www/server.js"
+   "start": "cd client/server.js"
 },
   "keywords": [
     "ecosystem:cordova"
